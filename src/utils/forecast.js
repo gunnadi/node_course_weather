@@ -16,8 +16,11 @@ req({ url, json: true }, (error, {body}) => {
        const value = body
        const info = value.currently
         
-       callback(undefined, value.timezone + '\n' + value.daily.data[0].summary + ' dengan temperatur ' + info.temperature + " derajat, prakiraan hujan " + info.precipProbability + " % ")
-
+       callback(undefined, value.timezone + '\n' + value.daily.data[0].summary + ' dengan temperatur ' + info.temperature 
+       + " derajat, prakiraan hujan " + info.precipProbability + " % "
+       + " suhu tertinggi "+ value.daily.data[0].temperatureHigh + ", suhu terendah "+ value.daily.data[0].temperatureMin )
+       
+       //console.log(value)
  //      console.log(value.timezone + '\n' + value.daily.data[0].summary + ' dengan temperatur ' + info.temperature + " derajat, prakiraan hujan " + info.precipProbability + " % ")
 
    }
