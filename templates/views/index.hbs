@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+  <!-- absolute path -->
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="icon" href="/img/icons.png">
+
+  <title>Weather</title>
+</head>
+
+<body>
+
+
+  <div class="main-content">
+    {{>header}}
+    <p>Weather Search From This Location..</p>
+    <form action="#">
+      <input type="text" placeholder="Location, cth: Jakarta">
+      <button>Search</button>
+    </form>
+
+    <p id="msg_1"></p>
+    <p id="msg_2"></p>
+    
+  </div>
+
+  {{>footer}}
+  <script src="/js/app.js"></script>
+</body>
+
+</html>
